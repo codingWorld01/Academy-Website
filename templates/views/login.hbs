@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+    <title>Log in</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    <div class="flex justify-center items-center h-[92vh]">
+        <div
+            class="flex flex-col justify-center items-center md:flex-row shadow-2xl rounded-xl max-w-7xl md:my-12 w-[90%] h-[670px] md:h-[460px] m-2">
+            <div class="h-[100%] w-full md:w-3/4  bg-center  bg-cover rounded-lg"
+                style="background-image: url(https://images.pexels.com/photos/733745/pexels-photo-733745.jpeg?cs=srgb&dl=pexels-cesar-perez-733745.jpg&fm=jpg)">
+                <div class="text-lg lg:text-xl text-center md:mt-16 mt-4 space-x-5">
+
+                    <a href="https://en-gb.facebook.com/" target="_blank">
+                        <i
+                            class="fa-brands fa-facebook-f text-blue-500  bg-white rounded-full px-[14px] py-[10px] "></i>
+                    </a>
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin" target="_blank">
+                        <i class="fa-brands fa-twitter text-cyan-400 bg-white rounded-full px-[10px] py-[10px] "></i>
+                    </a>
+                    <a href="https://support.google.com/accounts/answer/12849458?sjid=17697544322798763579-AP#zippy="
+                        target="_blank">
+                        <i
+                            class="fa-brands fa-google-plus-g text-red-500 bg-white rounded-full px-[10px] py-[10px] "></i>
+                    </a>
+                </div>
+                <div class="text-white text-base font-semibold text-center mt-4 ">
+                    <h1>Don't have an account ?</h1>
+                    <h3> <a href="/register" class="hover:underline hover:underline-offset-4 tracking-wide">Signup</a>
+                    </h3>
+                </div>
+
+            </div>
+            <div class="h-[90%] w-full md:w-3/4">
+                <div class="text-xl cursor-pointer flex flex-col justify-center items-center mt-5 md:mt-0">
+                    <ion-icon name="logo-amplify"
+                        class="h-10 md:h-14 w-[13%] md:w-[17%] text-5xl text-fuchsia-600"></ion-icon>
+                    <div class=" flex flex-col justify-center items-center space-y-2">
+                        <div>
+                            <h1
+                                class="text-2xl text-black  text-center font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+                                Here you can Login</h1>
+                        </div>
+                        <div>
+                            <h1
+                                class="text-sm font-semibold text-center  bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+                                Let's join us :)</h1>
+                        </div>
+                    </div>
+                </div>
+                <form action="/login" method="POST">
+                    <div class="flex flex-col justify-center items-center mt-4 md:mt-8  space-y-6 md:space-y-8">
+
+                        {{!-- Email --}}
+                        <div class="">
+                            <input type="email" placeholder="Email Address" name="email"
+                                class=" bg-gray-100 rounded-lg px-5 py-2 focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]">
+                        </div>
+
+                        {{!-- Password --}}
+                        <div class="">
+                            <input type="password" placeholder="Password" name="password"
+                                class=" bg-gray-100 rounded-lg px-5 py-2 focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]">
+                        </div>
+
+                        {{!-- Remember Me --}}
+                        <div class="flex space-x-2 -ml-28 md:-ml-40  lg:-ml-52">
+                            <input type="checkbox" id="checkbox" name="checkbox">
+                            <label for="checkbox"
+                                class="text-sm font-semibold text-gray-400 -mt-1 cursor-pointer">Remember Me</label>
+                        </div>
+                    </div>
+
+                    {{!-- Submit --}}
+                    <div class="text-center mt-4">
+                        <button type="submit"
+                            class="uppercase font-bold bg-gradient-to-r from-indigo-500 from-20% via-purple-500 via-50% to-pink-500 to-90% hover:from-pink-500 hover:to-yellow-500 px-24 md:px-[118px] lg:px-[140px] py-2 rounded-md text-white bg-blue-500">login</button>
+                    </div>
+                </form>
+                <div class="text-center my-4">
+                    <a href="/forgot-password"
+                        class="text-sm font-medium text-gray-500 hover:text-blue-500 hover:underline">Forgot Password
+                        ?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/290d4f0eb4.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
